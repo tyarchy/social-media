@@ -30,6 +30,6 @@ ThoughtSchema.virtual('replyCount').get(function() {
   return this.replies.length;
 });
 
-const Thought = model('Comment', ThoughtSchema);
+const Thought = model('Thoughts', ThoughtSchema);
 
-module.exports = Thought;
+module.exports = { Thought }

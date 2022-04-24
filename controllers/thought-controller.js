@@ -1,10 +1,12 @@
 const { Thoughts } = require('../models');
 
+
 const thoughtController = {
+  
   // add thoughts
   addThought({ params, body }, res) {
     console.log(body);
-    Thought.create(body)
+    Thoughts.create(body)
       .then(({ _id }) => {
         return Thoughts.findOneAndUpdate(
           { _id: params.thoughtId },

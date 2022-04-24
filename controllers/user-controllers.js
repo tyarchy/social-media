@@ -6,7 +6,7 @@ const userController = {
     getUser(req, res) {
         User.find({})
           .populate({
-            path: 'comments',
+            path: 'thoughts',
             select: '-__v'
           })
           .select('-__v')
@@ -27,7 +27,7 @@ const userController = {
 
    // delete user
    deleteUser({ params }, res) {
-    Pizza.findOneAndDelete({ _id: params.id })
+    User.findOneAndDelete({ _id: params.id })
       .then(dbUserData => res.json(dbUserdata))
       .catch(err => res.json(err));
   }
