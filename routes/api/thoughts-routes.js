@@ -7,7 +7,7 @@ const {
  
   router
   .route('userid/:thoughtId')
-  .put(addThought)
+  .post(addThought)
   .delete(removeThought);
 
   
