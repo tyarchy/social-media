@@ -1,13 +1,13 @@
-const { Thoughts } = require('../models');
+const { Thought, User } = require('../models');
 
 
 const thoughtController = {
   
   // add thoughts
   addThought({ params, body }, res) {
-    console.log(body);
-    Thoughts.create(body)
-        .then(({ _id }) => {
+    console.log("body");
+    Thought.create(body)
+        .then((_id) => {
             return User.findOneAndUpdate(
                 { _id: params.userId },
                 { $push: { thoughts: _id } },
@@ -15,6 +15,7 @@ const thoughtController = {
             );
         })
         .then(dbThoughtsData => {
+          console.log(dbThoughtsData)
             if (!dbThoughtsData) {
                 res.status(404).json({ message: 'No thinking!' });
                 return;
@@ -25,7 +26,7 @@ const thoughtController = {
 },
  // remove reply
  removeThought({ params }, res) {
-    Thoughts.findOneAndUpdate(
+    Thought.findOneAndUpdate(
       { _id: params.ThoughtId },
       { $pull: { thought: { ThoughtId: params.ThoughtId } } },
       { new: true }
@@ -36,3 +37,8 @@ const thoughtController = {
 };
 
 module.exports = thoughtController
+
+// creats/post
+// gets
+// update
+// delete
