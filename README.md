@@ -1,7 +1,7 @@
 # Social-Media
 
 ## Description
-### Social-Media is a api that uses a Nosql database to organize users, and the thoughts and reactions of users.
+### Social-Media is a api that uses a Nosql database to organize users, and their thoughts and reactions.
   
 ## Table of Contents
 1. [Applications](#Features)
