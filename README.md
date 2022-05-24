@@ -14,7 +14,7 @@
 
 
 ## Usage and Applications
-### If you want to have some kind of messaging forum you could use Social-Media to run the data. I don't think it solves as many problems as it can create put thats what social media apps do.  Makes communicating easier at least
+### If you want to have some kind of messaging forum you could use Social-Media to run the data. I don't think it solves as many problems as it can create but thats what social media apps do.  Makes communicating easier at least.
 
 <p>&nbsp;</p>  
 
