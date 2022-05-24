@@ -2,6 +2,9 @@
 
 ## Description
 ### Social-Media is a api that uses a Nosql database to organize users, and their thoughts and reactions.
+
+## Github Repo: https://github.com/tyarchy/social-media
+## Video Demo Link: https://www.youtube.com/watch?v=nyrr9DDcXm0&t=2s
   
 ## Table of Contents
 1. [Applications](#Features)
