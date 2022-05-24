@@ -16,7 +16,12 @@ const ThoughtSchema = new Schema(
       type: Date,
       default: Date.now,
       get: createdAtVal => dateFormat(createdAtVal)
-    }
+    },
+    username: {
+      type: String,
+      required: true,
+      ref: 'User'
+  },
   },
   {
     toJSON: {
@@ -30,6 +35,6 @@ ThoughtSchema.virtual('replyCount').get(function() {
   return this.replies.length;
 });
 
-const Thought = model('Comment', ThoughtSchema);
+const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought;
